@@ -12,7 +12,7 @@ def format_csv_result(data):
 
     for price in data['Price']:
         #  Create two new columns to separate the prices.
-        data[['Original_price', 'Discount_price']] = data['Precio'].str.split(
+        data[['Original_price', 'Discount_price']] = data['Price'].str.split(
             ',', expand=True)
 
     #  If there is not a discount price, fill with a "No discount" text.
