@@ -19,7 +19,7 @@ def format_csv_result(data):
     data['Discount_price'] = data['Discount_price'].fillna('No discount')
 
     #  Drop the "Price" column.
-    data = data.drop('Precio', axis=1)
+    data = data.drop('Price', axis=1)
 
     #  Convert the dataframe to csv with a new name.
     data.to_csv('farmacia_productos_clean.csv', index=False)
